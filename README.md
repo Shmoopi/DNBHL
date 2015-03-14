@@ -14,12 +14,12 @@ DNBHL (Do Not Believe His Lies) Automated Code Testing Script
 Using the ShadowPuzzle script is very simple, just drag and drop it into Terminal, or cd into the directory with your script, and give it the path to a text file containing the codes you'd like to try.
 
 ```shell
-    $ ./ShadowPuzzle.sh checkthisout.txt
+$ ./ShadowPuzzle.sh checkthisout.txt
 ```
 Or simply pass the codes as arguments to the script.
 
 ```shell
-    $ ./ShadowPuzzle.sh "the first time" "I SAW YOU THERE" "In my dreams"
+$ ./ShadowPuzzle.sh "the first time" "I SAW YOU THERE" "In my dreams"
 ```
 
 Codes are separated by newlines in the provided txt file.
