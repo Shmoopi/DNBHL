@@ -46,9 +46,9 @@ function doesStringWork() {
   # Time the curling of the page
   START=$(date +%s)
   # Curl the s3 page
-  PAGE=$(curl -s https://s3.amazonaws.com/shadowpuzzle/"$STRING".xml 2>&1)
+  PAGE=$(curl -s https://s3.amazonaws.com/shadowpuzzle/"$STRING".xml --connect-timeout 60 2>&1)
   # Grep the page to see if there's a match
-  if [[ ! "$PAGE" =~ "Access Denied" ]]; then
+  if [[ ! "$PAGE" =~ "Access Denied" ]] && [ -n "$PAGE" ]; then
     # Found it!
 
     # Finish timing the curl
