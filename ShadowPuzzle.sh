@@ -41,8 +41,8 @@ SHOWPUZZLELOCATION=1
 function doesStringWork() {
   # Set var to the first argument passed to this function
   var=$1
-  # Make the argument contain no spaces and all caps
-  STRING=$(echo "${var//[[:blank:]]/}" | awk '{print toupper($0)}')
+  # Make the argument contain no spaces, all caps, alpha numeric
+  STRING=$(echo "${var//[[:blank:]]/}" | awk '{print toupper($0)}' | env LC_CTYPE=C tr -dc 'a-zA-Z0-9')
   # Time the curling of the page
   START=$(date +%s)
   # Curl the s3 page
