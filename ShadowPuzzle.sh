@@ -16,7 +16,7 @@
 ###################################################################################################
 
 # Check if we received any arguments
-if [ -z "$@" ]; then
+if [ $# -le 0 ]; then
   # Nothing input, fail
   echo "No input received..."
 
